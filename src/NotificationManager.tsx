@@ -4,10 +4,10 @@ const VAPID_KEY =
   "BP9BoG447icaYrAdcVzfUG4Zfy9VCW1pVjNUJBkj6DHL4lkNswcM75bv4nICGyZyZ6g_QNaTtHDCBMeES8D4vhQ";
 
 export async function requestNotificationPermission() {
+  alert("Notification permission status: " + 'fuck');
+
   try {
     const permission = await Notification.requestPermission();
-
-    alert("Notification permission status: " + permission);
 
     if (permission === "granted") {
       const token = await getToken(messaging, { vapidKey: VAPID_KEY });
