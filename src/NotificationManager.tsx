@@ -10,8 +10,7 @@ export async function requestNotificationPermission() {
       const token = await getToken(messaging, { vapidKey: VAPID_KEY });
       console.log("FCM Token:", token);
 
-
-      console.log(token)
+      console.log(token);
       // Save this token to your backend to send push notifications
     } else {
       console.warn("Permission denied for notifications");

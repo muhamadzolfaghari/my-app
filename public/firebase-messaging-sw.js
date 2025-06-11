@@ -18,7 +18,7 @@ const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage(function (payload) {
   console.log("[Service Worker] Background message ", payload);
-  const { title, body } = payload.notification;
+  const { title, body } = payload.data;
 
   self.registration.showNotification(title, {
     body,
