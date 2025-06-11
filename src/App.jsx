@@ -19,6 +19,9 @@ function App() {
 
   return (
     <div>
+      <button onClick={() => requestNotificationPermission()}>
+        get mohammad reza token
+      </button>
       <input value={token || ""} readOnly />
     </div>
   );
