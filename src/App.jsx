@@ -16,7 +16,12 @@ function App() {
 
   return (
     <div>
-      <button onClick={() => requestNotificationPermission().then(setToken)}>
+      <button
+        onClick={() => {
+          console.log("Requesting notification permission...");
+          requestNotificationPermission().then(setToken);
+        }}
+      >
         get mohammad reza token
       </button>
       <input value={token || ""} readOnly />
