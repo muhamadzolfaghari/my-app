@@ -20,6 +20,7 @@ export async function requestNotificationPermission() {
       console.warn("Permission denied for notifications");
     }
   } catch (error) {
+    alert("Error requesting notification permission: " + error);
     console.error("Error getting FCM token:", error);
   }
 }
