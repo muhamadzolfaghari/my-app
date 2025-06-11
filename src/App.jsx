@@ -18,7 +18,6 @@ function App() {
     <div>
       <button
         onClick={() => {
-          alert("Requesting notification permission...");
           requestNotificationPermission().then(setToken);
         }}
       >

@@ -6,6 +6,9 @@ const VAPID_KEY =
 export async function requestNotificationPermission() {
   try {
     const permission = await Notification.requestPermission();
+
+    alert("Notification permission status: " + permission);
+
     if (permission === "granted") {
       const token = await getToken(messaging, { vapidKey: VAPID_KEY });
       console.log("FCM Token:", token);
