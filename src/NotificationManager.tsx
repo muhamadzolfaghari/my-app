@@ -4,8 +4,6 @@ const VAPID_KEY =
   "BP9BoG447icaYrAdcVzfUG4Zfy9VCW1pVjNUJBkj6DHL4lkNswcM75bv4nICGyZyZ6g_QNaTtHDCBMeES8D4vhQ";
 
 export async function requestNotificationPermission() {
-  alert("Notification permission status: " + "fuck");
-
   try {
     alert("Notification permission status: " + navigator.serviceWorker);
     alert("Notification permission status: " + !!Notification);
