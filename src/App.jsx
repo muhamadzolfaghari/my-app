@@ -11,15 +11,12 @@ function App() {
 
   useEffect(() => {
     requestNotificationPermission().then(setToken);
-
-    console.log(token, "dffsdfsd");
-
     listenForMessages();
   }, [token]);
 
   return (
     <div>
-      <button onClick={() => requestNotificationPermission()}>
+      <button onClick={() => requestNotificationPermission().then(setToken)}>
         get mohammad reza token
       </button>
       <input value={token || ""} readOnly />
