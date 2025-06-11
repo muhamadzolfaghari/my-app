@@ -10,15 +10,17 @@ function App() {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
-    const token = requestNotificationPermission();
-    setToken(token);
+    requestNotificationPermission().then(setToken);
+
+    console.log(token, "dffsdfsd");
+
     listenForMessages();
-  }, []);
+  }, [token]);
 
   return (
-    <>
-      <div>{token}</div>
-    </>
+    <div>
+      <input value={token || ""} readOnly />
+    </div>
   );
 }
 
